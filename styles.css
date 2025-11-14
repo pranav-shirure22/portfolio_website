@@ -1,0 +1,393 @@
+/* AMAZON SYSTEM DESIGN - BIOTECH PRO */
+@import url('https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@400;500;700&display=swap');
+
+:root {
+    --amazon-orange: #FF9900;
+    --amazon-blue: #146EB4;
+    --amazon-black: #131921;
+    --amazon-dark: #232F3E;
+    --amazon-light: #F8F9FA;
+    --amazon-gray: #E7E7E7;
+    --text: #0F1111;
+    --text-light: #555;
+    --border: #DDD;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--amazon-black);
+    color: white;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--amazon-orange);
+}
+
+.top-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: 500;
+}
+
+.top-links a:hover {
+    color: var(--amazon-orange);
+}
+
+/* Hero Product */
+.hero-product {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-image {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--amazon-orange);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-details h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--amazon-blue);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.rating {
+    margin: 1rem 0;
+}
+
+.stars {
+    color: #FFA41C;
+    font-size: 1.1rem;
+}
+
+.rating-count {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.price {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+.status {
+    color: #007600;
+    font-weight: 600;
+}
+
+.in-stock {
+    color: #007600;
+}
+
+.highlights ul {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.highlights li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--amazon-orange);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--amazon-blue);
+    border: 2px solid var(--amazon-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--amazon-blue);
+    color: white;
+}
+
+.contact-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-badges a {
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.badge-linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+.badge-location {
+    background: #eee;
+    color: var(--text);
+}
+
+/* Trust Bar */
+.trust-bar {
+    background: white;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.trust-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.trust-item i {
+    font-size: 1.8rem;
+    color: var(--amazon-orange);
+}
+
+/* Tabs */
+.product-tabs {
+    padding: 3rem 0;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.tab-btn {
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--amazon-orange);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    color: var(--amazon-blue);
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    background: var(--amazon-orange);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.progress {
+    height: 8px;
+    background: var(--amazon-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.fill {
+    height: 100%;
+    background: var(--amazon-orange);
+    border-radius: 4px;
+    transition: width 1.5s ease;
+}
+
+/* Reviews */
+.reviews {
+    padding: 3rem 0;
+    background: #f8f9fa;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.review-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.review-card .stars {
+    color: #FFA41C;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--amazon-black);
+    color: #ddd;
+    padding: 3rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-grid a {
+    color: var(--amazon-orange);
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #999;
+}
